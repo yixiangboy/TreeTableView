@@ -1,4 +1,8 @@
 # TreeTableView
+
+![](https://github.com/yixiangboy/TreeTableView/blob/master/show.gif)
+
+
 ##使用说明
 这是一个使用非递归方法，写的高扩展性，高复用性的IOS树形结构。支持多级树形结构。<br/>
 代码简单易懂，纯代码编写。<br/>
