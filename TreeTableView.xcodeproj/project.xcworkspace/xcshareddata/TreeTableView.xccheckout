@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>08E33E14-0802-4DF7-924B-FDDA94E341B7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TreeTableView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C82DC7F4F778D351B30A23FCB6FD75EDA0547138</key>
+		<string>https://github.com/yixiangboy/TreeTableView</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TreeTableView.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C82DC7F4F778D351B30A23FCB6FD75EDA0547138</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yixiangboy/TreeTableView</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C82DC7F4F778D351B30A23FCB6FD75EDA0547138</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C82DC7F4F778D351B30A23FCB6FD75EDA0547138</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TreeTableView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
