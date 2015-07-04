@@ -85,7 +85,9 @@ TreeTableView *tableview = [[TreeTableView alloc] initWithFrame:CGRectMake(0, 20
 
 通过简单以上三步，你就可以把该树形控件集成到你的项目中。<br/>
 在演示项目中，每个cell我都使用系统自带的cell，样式比较简单，如果你要展现更加漂亮的样式，可以自定义cell。<br/>
-同时，你也可以扩展该数据模型，运动到更加复杂的业务处理中。<br/>
+同时，你也可以扩展该数据模型，运动到更加复杂的业务处理中。比如以下场景：<br/>
+
+![](https://github.com/yixiangboy/TreeTableView/blob/master/show2.gif)
 
 
 
