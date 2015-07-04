@@ -1,9 +1,12 @@
 # TreeTableView
-这是一个使用非递归方法，写的高扩展性，高复用性的IOS树形结构。支持多级树形结构。
-代码简单易懂，纯代码编写。
-下面教你如何使用该树形控件。
+##使用说明
+这是一个使用非递归方法，写的高扩展性，高复用性的IOS树形结构。支持多级树形结构。<br/>
+代码简单易懂，纯代码编写。<br/>
+下面教你如何使用该树形控件。<br/>
 
-第一步：建立数据模型
+###第一步：建立数据模型
+
+```
 
 /**
 *  每个节点类型
@@ -20,19 +23,20 @@
 
 @property (nonatomic , assign) BOOL expand;//该节点是否处于展开状态
 
-
 /**
 *快速实例化该对象模型
 */
 - (instancetype)initWithParentId : (int)parentId nodeId : (int)nodeId name : (NSString *)name depth : (int)depth expand : (BOOL)expand;
 
 @end
+```
 
 
 
 
+###第二步：按照以上的数据模型，组装数据，下面以 国家-身份-城市 的三级目录进行演示。
 
-第二步：按照以上的数据模型，组装数据，下面以 国家-身份-城市 的三级目录进行演示。
+```
 
 //----------------------------------中国的省地市关系图3,2,1--------------------------------------------
 Node *country1 = [[Node alloc] initWithParentId:-1 nodeId:0 name:@"中国" depth:0 expand:YES];
@@ -58,23 +62,26 @@ Node *city9 = [[Node alloc] initWithParentId:14 nodeId:16 name:@"旧金山" dept
 
 //----------------------------------日本的省地市关系图0,1,2--------------------------------------------
 Node *country3 = [[Node alloc] initWithParentId:-1 nodeId:17 name:@"日本" depth:0 expand:YES];
+```
 
 
 
+###第三步：使用以上数据进行TeeTableView的初始化。
 
-第三步：使用以上数据进行TeeTableView的初始化。
-
+```
 NSArray *data = [NSArray arrayWithObjects:country1,province1,city1,city2,city3,province2,city4,city5,province3,city6,country2,province4,province5,city7,province6,city8,city9,country3, nil];
 
 
 TreeTableView *tableview = [[TreeTableView alloc] initWithFrame:CGRectMake(0, 20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-20) withData:data];
 [self.view addSubview:tableview];
+```
 
 
+###扩展说明：
 
-扩展说明：通过简单以上三步，你就可以把该树形控件集成到你的项目中。
-        在演示项目中，每个cell我都使用系统自带的cell，样式比较简单，如果你要展现更加漂亮的样式，可以自定义cell。
-        同时，你也可以扩展该数据模型，运动到更加复杂的业务处理中。
+通过简单以上三步，你就可以把该树形控件集成到你的项目中。<br/>
+在演示项目中，每个cell我都使用系统自带的cell，样式比较简单，如果你要展现更加漂亮的样式，可以自定义cell。<br/>
+同时，你也可以扩展该数据模型，运动到更加复杂的业务处理中。<br/>
 
 
 
