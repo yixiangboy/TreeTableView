@@ -123,9 +123,9 @@
     
     //插入或者删除相关节点
     if (expand) {
-        [self insertRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationTop];
+        [self insertRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationNone];
     }else{
-        [self deleteRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationTop];
+        [self deleteRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationNone];
     }
 }
 
