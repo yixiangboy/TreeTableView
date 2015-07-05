@@ -249,7 +249,8 @@ return endPosition;
 <br/>
 ##五、下载地址
 github下载地址：[https://github.com/yixiangboy/TreeTableView](https://github.com/yixiangboy/TreeTableView)<br/>
-如果觉得对你还有些用，给一颗star吧。你的支持是我继续的动力。
+如果觉得对你还有些用，给一颗star吧。你的支持是我继续的动力。<br/>
+个人博客地址：[http://blog.csdn.net/yixiangboy](http://blog.csdn.net/yixiangboy)
 <br/>
 ##五、博主的话
 以前看过很多别人的博客，学到不少东西。现在准备自己也开始谢谢博客，希望能够帮到一些人。如果工作不是特别忙的话，准备每周写一篇。<br/>
