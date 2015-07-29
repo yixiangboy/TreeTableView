@@ -105,12 +105,12 @@
             if (node.expand) {
                 [_tempData insertObject:node atIndex:endPosition];
                 expand = YES;
+                endPosition++;
             }else{
                 expand = NO;
                 endPosition = [self removeAllNodesAtParentNode:parentNode];
                 break;
             }
-            endPosition++;
         }
     }
     
@@ -134,7 +134,7 @@
  *
  *  @param parentNode 父节点
  *
- *  @return 邻接父节点的位置距离该父节点的长度，也就是该父节点下面所有的子孙节点的数量
+ *  @return 该父节点下一个相邻的统一级别的节点的位置
  */
 -(NSUInteger)removeAllNodesAtParentNode : (Node *)parentNode{
     NSUInteger startPosition = [_tempData indexOfObject:parentNode];
@@ -142,7 +142,12 @@
     for (NSUInteger i=startPosition+1; i<_tempData.count; i++) {
         Node *node = [_tempData objectAtIndex:i];
         endPosition++;
-        if (node.depth == parentNode.depth) {
+        if (node.depth <= parentNode.depth) {
+            break;
+        }
+        if(endPosition == _tempData.count-1){
+            endPosition++;
+            node.expand = NO;
             break;
         }
         node.expand = NO;
