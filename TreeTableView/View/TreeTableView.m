@@ -64,13 +64,17 @@
     
     Node *node = [_tempData objectAtIndex:indexPath.row];
     
-    NSMutableString *name = [NSMutableString string];
-    for (int i=0; i<node.depth; i++) {
-        [name appendString:@"     "];
-    }
-    [name appendString:node.name];
+    // cell有缩进的方法
+    cell.indentationLevel = node.depth; // 缩进级别
+    cell.indentationWidth = 30.f; // 每个缩进级别的距离
     
-    cell.textLabel.text = name;
+//    NSMutableString *name = [NSMutableString string];
+//    for (int i=0; i<node.depth; i++) {
+//        [name appendString:@"     "];
+//    }
+//    [name appendString:node.name];
+    
+    cell.textLabel.text = node.name;
     
     return cell;
 }
