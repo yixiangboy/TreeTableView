@@ -67,6 +67,7 @@
     // cell有缩进的方法
     cell.indentationLevel = node.depth; // 缩进级别
     cell.indentationWidth = 30.f; // 每个缩进级别的距离
+
     
 //    NSMutableString *name = [NSMutableString string];
 //    for (int i=0; i<node.depth; i++) {
@@ -99,6 +100,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //先修改数据源
     Node *parentNode = [_tempData objectAtIndex:indexPath.row];
+    if (_treeTableCellDelegate && [_treeTableCellDelegate respondsToSelector:@selector(cellClick:)]) {
+        [_treeTableCellDelegate cellClick:parentNode];
+    }
+    
     NSUInteger startPosition = indexPath.row+1;
     NSUInteger endPosition = startPosition;
     BOOL expand = NO;

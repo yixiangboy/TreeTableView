@@ -10,7 +10,7 @@
 #import "Node.h"
 #import "TreeTableView.h"
 
-@interface ViewController ()
+@interface ViewController ()<TreeTableCellDelegate>
 
 @end
 
@@ -61,9 +61,13 @@
     
     
     TreeTableView *tableview = [[TreeTableView alloc] initWithFrame:CGRectMake(0, 20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-20) withData:data];
+    tableview.treeTableCellDelegate = self;
     [self.view addSubview:tableview];
-    
+}
 
+#pragma mark - TreeTableCellDelegate
+-(void)cellClick:(Node *)node{
+    NSLog(@"%@",node.name);
 }
 
 @end
